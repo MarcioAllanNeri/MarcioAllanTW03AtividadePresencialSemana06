@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Programação Estruturada</title>
+    </head>
+    <body>
+    <h1>Entrada do Programa</h1>
+
+        Hora Atual: <input id="horaAtual" value=""><br />
+
+        <button onclick='executarExercicio()'>OK</button>
+        <p id="resultado"></p>
+
+        <script>
+            function executarExercicio() {
+                let a = Number(document.getElementById('horaAtual').value);
+                // Escreva seus algoritmos a partir daqui.
+                let data = new Date();
+                let hora = data.getHours();
+                let minuto = data.getMinutes();
+                let segundos = data.getSeconds();
+
+                let r = hora + ":" + minuto + ":" + segundos; // atribua os resultados dos algoritmos a r
+                
+                document.getElementById('resultado').innerHTML = r;
+            }
+        </script>
+    </body>
+</html>

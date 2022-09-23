@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Programação Estruturada</title>
+    </head>
+    <body>
+        <h1>Entrada do Programa</h1>
+        Informe sua data e veja quando anos tem: <input type="date" id="nascimento" value=""><br />
+        <button onclick='executarExercicio()'>OK</button>
+        <p id="resultado"></p>
+        <script>
+            function executarExercicio() {
+                let dataNasc = document.getElementById('nascimento').value;
+                let diaNasc = Number(dataNasc.slice(8,10));
+                let mesNasc = Number(dataNasc.slice(5,7));
+                let anoNasc = Number(dataNasc.slice(0,4));
+                let dataHoje = new Date()
+                let diaHoje = dataHoje.getDate()
+                let mesHoje = dataHoje.getMonth()+1
+                let anoHoje = dataHoje.getFullYear()
+                let idade = anoHoje-anoNasc;
+
+                if(mesNasc <= mesHoje && diaNasc <= diaHoje) {
+                    idade = idade +1
+                }
+
+                console.log(dataNasc)
+                console.log(diaNasc)
+                console.log(mesNasc)
+                console.log(idade)
+
+
+
+                // Escreva seus algoritmos a partir daqui
+                /*let dataHoje = new Date();
+                let dia = dataHoje.getDate();
+                let mes = dataHoje.getMonth();
+                let ano = dataHoje.getFullYear();
+                let sequenciaData = dia + "/" + mes + "/" + ano;
+                let dataDigitada = a;
+                let dataAtual = sequenciaData;
+                let textoDia = dataDigitada.slice(-1,1)
+                let textoMes = dataDigitada.slice(2,4)
+                let textoAno = dataDigitada.slice(5,9)
+                let 
+                let r = a; // atribua os resultados dos algoritmos a r
+                document.getElementById('resultado').innerHTML = r;*/
+            }
+        </script>
+    </body>
+</html>
